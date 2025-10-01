@@ -10,6 +10,7 @@ namespace ConsoleDrankkaart
 	{
 		static void Main(string[] args)
 		{
+			Console.
 			string header = "@====== MENU ======\n"+
 			"☕ Koffie:      3€\n" +
 			"🍵 Thee:        2€\n" +
