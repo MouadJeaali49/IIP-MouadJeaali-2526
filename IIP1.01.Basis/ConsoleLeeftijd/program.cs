@@ -14,14 +14,13 @@ namespace ConsoleGangsterName
 			string voornaam = Console.ReadLine();
 			
 			Console.Write("Hoe oud ben je? ");
-			int leeftijd = int.Parse(Console.ReadLine());
+			int leeftijd = Convert.ToInt32(Console.ReadLine());
 			
 			Console.Write("Geef is je lievelingsletter: ");
 			char keuze = Console.ReadKey().KeyChar;
 			
 			// Lege regel toevoegen
 			Console.WriteLine();
-			
 			Console.WriteLine();
 			
 			// Tweede alinea
