@@ -3,14 +3,14 @@
 *Datum: 25/09/2025
 */
 using System;
-
+using System.Text;
 namespace ConsoleDrankkaart
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			Console.
+			Console.OutputEncoding = Encoding.UTF8;
 			string header = "@====== MENU ======\n"+
 			"☕ Koffie:      3€\n" +
 			"🍵 Thee:        2€\n" +
