@@ -30,7 +30,7 @@ namespace ConsoleAbonnement
 			
 			// Samenvatting tonen
 			Console.WriteLine("");
-			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Console.WriteLine("Samenvatting");
 			Console.WriteLine("================");
 			
