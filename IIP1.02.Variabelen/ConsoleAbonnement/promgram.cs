@@ -10,7 +10,7 @@ namespace ConsoleAbonnement
 			Console.OutputEncoding = Encoding.UTF8;
 			
 			Console.WriteLine("Bestelgegevens");
-			string header = "================\n";
+			string header = "================";
 			Console.WriteLine(header);
 			Console.Write("Geef je naam: ");
 			string Naam = Console.ReadLine();
@@ -34,16 +34,16 @@ namespace ConsoleAbonnement
 			Console.WriteLine("Samenvatting");
 			Console.WriteLine("================");
 			
-			Console.WriteLine($"- houder: {Naam}");
-			Console.WriteLine($"- geslacht: {geslacht}");
-			Console.WriteLine($"- prijs: {prijs}");
-			Console.WriteLine($"- aantal beurten: {toegangsbeurten}");
-			Console.WriteLine($"- incl. badkledij: {inbegrepen}");
-			
-			//kaartnummer
 			Random rnd = new Random();
 			string kaartnummer = $"{rnd.Next(100, 1000)}-{rnd.Next(1000, 10000)}-{rnd.Next(10, 100)}"; 
-			Console.WriteLine($"- kaartnummer: {kaartnummer}");
+			
+			Console.WriteLine($@"
+- houder: {Naam}
+- geslacht: {geslacht}
+- prijs: {prijs}
+- aantal beurten: {toegangsbeurten}
+- incl. badkledij: {inbegrepen}
+- kaartnummer: {kaartnummer}");			
 			Console.ResetColor();
 
 			
