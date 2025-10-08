@@ -15,6 +15,10 @@
  */
 
 using System;
+using System.Text;
+
+namespace ConsoleShortVariabelen
+
 
 class Program
 {
@@ -37,7 +41,9 @@ class Program
 		 */
 		Console.WriteLine("\n\nOefening A.1: Eerste variabelen\n------------\n");
 		// TODO: implementeer hier
-		// ...
+		
+		
+	
 
 		/* --- Oefening A.2: Favoriete kleur en leeftijd ---
 		 * Context: Je schrijft een klein programma dat je eigen favoriete kleur en leeftijd weergeeft.

@@ -28,8 +28,10 @@ namespace ConsoleAbonnement
 			char geslacht = Console.ReadKey().KeyChar;
 			Console.WriteLine();
 			
-			// Samenvatting tonen
+			// lege regel voor betere overzicht
 			Console.WriteLine("");
+			
+			// Samenvatting tonen
 			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Console.WriteLine("Samenvatting");
 			Console.WriteLine("================");
@@ -37,8 +39,7 @@ namespace ConsoleAbonnement
 			Random rnd = new Random();
 			string kaartnummer = $"{rnd.Next(100, 1000)}-{rnd.Next(1000, 10000)}-{rnd.Next(10, 100)}"; 
 			
-			Console.WriteLine($@"
-- houder: {Naam}
+			Console.WriteLine($@"- houder: {Naam}
 - geslacht: {geslacht}
 - prijs: {prijs}
 - aantal beurten: {toegangsbeurten}
