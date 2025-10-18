@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace ConsoleBmi
+namespace ConsoleBmiKleuren
 {
 	internal class Program
 	{

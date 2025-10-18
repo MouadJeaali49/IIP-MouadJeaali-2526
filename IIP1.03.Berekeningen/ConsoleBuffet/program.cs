@@ -20,9 +20,9 @@ Alles is à volonté en dranken zijn inbegrepen!
 			Console.WriteLine(header);
 			Console.ResetColor();
 			
-			const double Seizoensbuffets = 18.5;
-			const double Dessertenbuffets = 7.95;
-			const double Kids = 8.95;
+			const decimal Seizoensbuffets = 18.5m;
+			const decimal Dessertenbuffets = 7.95m;
+			const decimal Kids = 8.95m;
 			
 			
 			
