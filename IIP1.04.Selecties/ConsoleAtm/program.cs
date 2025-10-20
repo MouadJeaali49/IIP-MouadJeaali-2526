@@ -61,7 +61,7 @@ namespace ConsoleAtm
 						{
 						maximaal = MAX_AFHALING;
 						}
-						Console.WriteLine("fout: je kan maximaal € " + maximaal + " afhalen");
+						Console.WriteLine("fout: je kan maximaal " + maximaal + " afhalen");
 					}
 					// controle 3: enkel briefjes van 20 en 50 zijn mogelijk
 					else if (bedrag % 10 != 0 || bedrag == 10 || bedrag == 30)
