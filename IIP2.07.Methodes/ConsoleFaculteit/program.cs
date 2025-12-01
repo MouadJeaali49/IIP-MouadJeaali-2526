@@ -5,16 +5,36 @@
 */
 using System;
 using System.Text;
-using System.Globalization;
 
 namespace ConsoleFaculiteit
 {
 	internal class Program
 	{
-		static void Main(string[] args)
+		private static int Faculteit(int n)
 		{
-			Console.OutputEncoding = Encoding.UTF8;
+			int fac = 1;
 			
-			private static int Faculteit(int n) {
+			for (int i = 1; i<= n; i++)
+			{
+				fac *= i;
+			}
 			
+			return fac;
+		}
+		
+		static void Main(string[] args)
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+			
+			Console.WriteLine("FACULTEIT BEREKENEN");
+			Console.WriteLine();
+			
+			Console.Write("Geef een geheel getal: ");
+			int n = int.Parse(Console.ReadLine());
+			
+			int resultaat = Faculteit(n);
+			
+			Console.WriteLine($"De faculteit is {resultaat}");
+		}
+	}
 }
