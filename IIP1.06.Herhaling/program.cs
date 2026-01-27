@@ -1,12 +1,9 @@
 /*
  * Auteur: Mouad Jeaali
- * Datum: 2025-11-12
+ * Datum: 2026-01-09
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Globalization;
 
 namespace ConsoleHerhalingCircus
@@ -34,7 +31,7 @@ namespace ConsoleHerhalingCircus
 (c) Winkelmandje wissen
 (q) Bestelling afronden");
 			
-			Console.Write("\nje Keuze: ");
+			Console.Write("\nJe Keuze: ");
 			keuze = Console.ReadKey().KeyChar;
 			switch(keuze){
 				case('a'):
@@ -43,14 +40,14 @@ namespace ConsoleHerhalingCircus
 				Console.Write("Kinderen: ");
 				kinderen = Convert.ToInt32(Console.ReadLine());
 				if(kinderen == 0 && volwassenen == 0){
-					Console.Write("\nje winkelmandje is leeg.");
+					Console.Write("\nJe winkelmandje is leeg.");
 				}
 				else{
-					Console.Write($"er zijn tickets voor {volwassenen} volwassenen en {kinderen} kinderen toegevoegd aan");
-					Console.Write("\nje winkelmandje.");
+					Console.Write($"Er zijn tickets voor {volwassenen} volwassenen en {kinderen} kinderen toegevoegd aan je winkelmandje.");
 				
 				}
-				Console.Write("druk op een toets om verder te gaan.");
+				Console.WriteLine();
+				Console.Write("\n... druk op een toets om verder te gaan.");
 				Console.ReadKey();
 				Console.Clear();
 				break;
@@ -59,6 +56,7 @@ namespace ConsoleHerhalingCircus
 				
 				if(volwassenen!=0)
 				{
+					Console.WriteLine();
 					Console.Write("\nVolwassenen: ");
 					for(int i = 0; i<volwassenen; i++){
 					Console.Write("💼");
@@ -74,11 +72,13 @@ namespace ConsoleHerhalingCircus
 					for(int i = 0; i<kinderen; i++){
 					Console.Write("💼");
 					}
+					Console.WriteLine();
 				}
 				else{
-					Console.Write("\nje winkelmandje is leeg.");
+					Console.Write("\nJe winkelmandje is leeg.");
+					Console.WriteLine();
 				}
-				Console.Write("\ndruk op een toets om verder te gaan.");
+				Console.Write("\n... druk op een toets om verder te gaan.");
 				Console.ReadKey();
 				Console.Clear();
 				break;
@@ -86,8 +86,10 @@ namespace ConsoleHerhalingCircus
 				case('c'):
 				volwassenen = 0;
 				kinderen = 0;
+				Console.WriteLine();
 				Console.Write("\nje winkelmandje is gewist");
-				Console.Write("\ndruk op een toets om verder te gaan.");
+				Console.WriteLine();
+				Console.Write("\n... druk op een toets om verder te gaan.");
 				Console.ReadKey();
 				Console.Clear();
 				break;
@@ -100,22 +102,33 @@ namespace ConsoleHerhalingCircus
 				jarig = Console.ReadKey().KeyChar;
 				if(jarig == 'j')
 				{
-					Console.WriteLine("\ngefeliciteerd je krijgt 9% korting");
-					totaalPrijs = totaalPrijs*0.09m;
+					Console.WriteLine("\nGefeliciteerd je krijgt 7% korting op je totaalprijs.");
+					totaalPrijs = totaalPrijs*0.93m;
 					stringTotaalPrijs = totaalPrijs.ToString("C", new CultureInfo("nl-NL"));
-					Console.WriteLine($"\nde Totaal prijs is: {stringTotaalPrijs}");
-					bonus = (int)(totaalPrijs%10m);
-					Console.WriteLine($"je hebt {bonus} bonuspunten");
+					Console.WriteLine();
+					Console.WriteLine($"\nTe betalen bedrag: {stringTotaalPrijs}");
+					bonus = (int)(totaalPrijs/10m);
+					Console.WriteLine();
+					Console.WriteLine($"je hebt {bonus} bonuspunten verzameld.");
 				}
 				else
 				{
-					Console.WriteLine($"\nje hebt {bonus} bonuspunten");
+					bonus = (int)(totaalPrijs/10m);
+					Console.WriteLine($"\nje hebt {bonus} bonuspunten verzameld.");
 				}
-				Console.WriteLine("tot ziens");
+				Console.WriteLine("Tot ziens!");
 				Console.Write("\ndruk op een toets om verder te gaan.");
 				
 				isAfgerond=true;
 				
+				Console.ReadKey();
+				Console.Clear();
+				break;
+				
+				default:
+				Console.WriteLine();
+				Console.WriteLine("\nOnbekende keuze.");
+				Console.Write("\n... druk op een toets om verder te gaan.");
 				Console.ReadKey();
 				Console.Clear();
 				break;

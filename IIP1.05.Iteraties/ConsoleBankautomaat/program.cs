@@ -100,11 +100,7 @@ namespace ConsoleBankautomaat
 				}
 			
 				Console.WriteLine();
-				if (!stoppen)
-				{
-					Console.ReadKey();
-				}
-			
+				
 			} 
 		}
 	}
